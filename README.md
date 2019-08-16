@@ -3,22 +3,7 @@
 # container-service-extension-templates
 
 ## Overview
-
-## Try it out
-
-### Prerequisites
-
-* Prereq 1
-* Prereq 2
-* Prereq 3
-
-### Build & Run
-
-1. Step 1
-2. Step 2
-3. Step 3
-
-## Documentation
+**container-service-extension-templates** is a repository to serve content for **container-service-extension**. The content is in the form of Kubernetes Templates scripts. **container-service-extension** is a vCloud Director extension that manages the life cycle of Kubernetes container clusters for tenants and providers using these Kubernetes Template scripts.
 
 ## Contributing
 
