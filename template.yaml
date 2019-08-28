@@ -1,4 +1,3 @@
---- # signals start of document
 templates: 
   - 
     admin_password: guest_os_admin_password
