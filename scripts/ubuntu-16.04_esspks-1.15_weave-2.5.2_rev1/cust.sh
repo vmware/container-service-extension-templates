@@ -97,6 +97,9 @@ echo 'deleting downloaded files'
 rm -rf vmware-kubernetes-v1.15.3+vmware.1 || :
 rm vmware-kubernetes-v1.15.3+vmware.1.tar.gz || :
 
+# enable kubelet service (essential PKS does not enable it by default)
+systemctl enable kubelet
+
 # /etc/machine-id must be empty so that new machine-id gets assigned on boot (in our case boot is vApp deployment)
 # https://jaylacroix.com/fixing-ubuntu-18-04-virtual-machines-that-fight-over-the-same-ip-address/
 truncate -s 0 /etc/machine-id
