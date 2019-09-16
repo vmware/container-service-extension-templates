@@ -1,6 +1,5 @@
 templates:
   - 
-    admin_password: guest_os_admin_password
     compute_policy: ""
     cpu: 2
     deprecated: false
