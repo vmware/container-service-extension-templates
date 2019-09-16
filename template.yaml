@@ -1,6 +1,5 @@
 templates: 
   - 
-    admin_password: "guest_os_admin_password"
     compute_policy: ""
     cpu: 2
     deprecated: false
@@ -14,7 +13,6 @@ templates:
     source_ova: "http://dl.bintray.com/vmware/photon/2.0/GA/ova/photon-custom-hw11-2.0-304b817.ova"
     source_ova_name: photon-custom-hw11-2.0-304b817.ova
   - 
-    admin_password: "guest_os_admin_password"
     compute_policy: ""
     cpu: 2
     deprecated: false
@@ -28,7 +26,6 @@ templates:
     source_ova: "https://cloud-images.ubuntu.com/releases/xenial/release-20180418/ubuntu-16.04-server-cloudimg-amd64.ova"
     source_ova_name: ubuntu-16.04-server-cloudimg-amd64.ova
   - 
-    admin_password: "guest_os_admin_password"
     compute_policy: ""
     cpu: 2
     deprecated: false
