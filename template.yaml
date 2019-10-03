@@ -17,7 +17,7 @@ templates:
     cpu: 2
     deprecated: false
     deprecated_in_cse_version: ""
-    description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.13.5, weave 2.3.0"
+    description: "Ubuntu 16.04.6, Docker-ce 18.09.7, Kubernetes 1.13.5, weave 2.3.0"
     mem: 2048
     name: ubuntu-16.04_k8-1.13_weave-2.3.0
     required_cse_version: "2.5.0"
@@ -30,7 +30,7 @@ templates:
     cpu: 2
     deprecated: false
     deprecated_in_cse_version: ""
-    description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.15.3, weave 2.5.2"
+    description: "Ubuntu 16.04.6, Docker-ce 18.09.7, Kubernetes 1.15.3, weave 2.5.2"
     mem: 2048
     name: ubuntu-16.04_k8-1.15_weave-2.5.2
     required_cse_version: "2.5.0"
