@@ -25,7 +25,7 @@ EOF
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 apt-get -q update
 apt-get -q install -y docker-ce=5:18.09.7~3-0~ubuntu-xenial
-apt-get -q install -y kubelet=1.15.3-00 kubeadm=1.15.3-00 kubectl=1.15.3-00 kubernetes-cni=0.7.5-00 --allow-unauthenticated
+apt-get -q install -y kubelet=1.15.5-00 kubeadm=1.15.5-00 kubectl=1.15.5-00 kubernetes-cni=0.7.5-00 --allow-unauthenticated
 systemctl restart docker
 while [ `systemctl is-active docker` != 'active' ]; do echo 'waiting for docker'; sleep 5; done
 

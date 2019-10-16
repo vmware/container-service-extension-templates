@@ -2,8 +2,8 @@ templates:
   - 
     compute_policy: ""
     cpu: 2
-    deprecated: false
-    deprecated_in_cse_version: ""
+    deprecated: true
+    deprecated_in_cse_version: "2.5"
     description: "PhotonOS v2, Docker-ce 18.06.2-3, Kubernetes 1.12.7, weave 2.3.0"
     mem: 2048
     name: photon-v2_k8-1.12_weave-2.3.0
@@ -17,11 +17,24 @@ templates:
     cpu: 2
     deprecated: false
     deprecated_in_cse_version: ""
-    description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.13.5, weave 2.3.0"
+    description: "PhotonOS v2, Docker-ce 18.06.2-3, Kubernetes 1.14.6, weave 2.5.2"
+    mem: 2048
+    name: photon-v2_k8-1.14_weave-2.5.2
+    required_cse_version: "2.5.0"
+    revision: 1
+    sha256_ova: cb51e4b6d899c3588f961e73282709a0d054bb421787e140a1d80c24d4fd89e1
+    source_ova: "http://dl.bintray.com/vmware/photon/2.0/GA/ova/photon-custom-hw11-2.0-304b817.ova"
+    source_ova_name: photon-custom-hw11-2.0-304b817.ova
+  - 
+    compute_policy: ""
+    cpu: 2
+    deprecated: false
+    deprecated_in_cse_version: ""
+    description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.13.12, weave 2.3.0"
     mem: 2048
     name: ubuntu-16.04_k8-1.13_weave-2.3.0
     required_cse_version: "2.5.0"
-    revision: 1
+    revision: 2
     sha256_ova: 3c1bec8e2770af5b9b0462e20b7b24633666feedff43c099a6fb1330fcc869a9
     source_ova: "https://cloud-images.ubuntu.com/releases/xenial/release-20180418/ubuntu-16.04-server-cloudimg-amd64.ova"
     source_ova_name: ubuntu-16.04-server-cloudimg-amd64.ova
@@ -30,11 +43,11 @@ templates:
     cpu: 2
     deprecated: false
     deprecated_in_cse_version: ""
-    description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.15.3, weave 2.5.2"
+    description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.15.5, weave 2.5.2"
     mem: 2048
     name: ubuntu-16.04_k8-1.15_weave-2.5.2
     required_cse_version: "2.5.0"
-    revision: 1
+    revision: 2
     sha256_ova: 3c1bec8e2770af5b9b0462e20b7b24633666feedff43c099a6fb1330fcc869a9
     source_ova: "https://cloud-images.ubuntu.com/releases/xenial/release-20180418/ubuntu-16.04-server-cloudimg-amd64.ova"
     source_ova_name: ubuntu-16.04-server-cloudimg-amd64.ova
