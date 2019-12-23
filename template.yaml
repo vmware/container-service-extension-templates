@@ -56,7 +56,6 @@ templates:
     cni: "weave"
     cni_version: "2.3.0"
     upgrade_from:
-      - ""
   - 
     compute_policy: ""
     cpu: 2
@@ -75,7 +74,6 @@ templates:
     cni: "weave"
     cni_version: "2.5.2"
     upgrade_from:
-      - ""
   - 
     compute_policy: ""
     cpu: 2
@@ -94,4 +92,3 @@ templates:
     cni: "weave"
     cni_version: "2.3.0"
     upgrade_from:
-      - ""
