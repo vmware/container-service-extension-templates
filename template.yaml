@@ -92,3 +92,4 @@ templates:
     cni: "weave"
     cni_version: "2.3.0"
     upgrade_from:
+      -
