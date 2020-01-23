@@ -30,7 +30,7 @@ tdnf update tdnf -y
 tdnf update --security --exclude "open-vm-tools,xerces-c,procps-ng"
 
 echo 'installing kuberentes'
-tdnf install -yq wget kubernetes-1.14.6-1.ph2 kubernetes-kubeadm-1.14.6-1.ph2
+tdnf install -yq wget kubernetes-1.14.6-3.ph2 kubernetes-kubeadm-1.14.6-3.ph2
 
 echo 'install docker'
 tdnf install -yq wget docker-18.06.2-3.ph2

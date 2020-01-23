@@ -25,14 +25,14 @@ EOF
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 apt-get -q update
 apt-get -q install -y docker-ce=5:18.09.7~3-0~ubuntu-xenial
-apt-get -q install -y kubelet=1.15.3-00 kubeadm=1.15.3-00 kubectl=1.15.3-00 kubernetes-cni=0.7.5-00 --allow-unauthenticated
+apt-get -q install -y kubelet=1.15.3-00 kubeadm=1.15.3-00 kubectl=1.15.3-00 kubernetes-cni=0.7.5-00
 systemctl restart docker
 while [ `systemctl is-active docker` != 'active' ]; do echo 'waiting for docker'; sleep 5; done
 
 echo 'setting up weave'
 export kubever=$(kubectl version --client | base64 | tr -d '\n')
 wget --no-verbose -O weave.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.5.2"
-curl -L git.io/weave -o /usr/local/bin/weave
+curl -L https://git.io/weave -o /usr/local/bin/weave
 chmod a+x /usr/local/bin/weave
 
 echo 'installing required software for NFS'
