@@ -5,7 +5,7 @@ set -e
 ### root password access is dangerous; ssh-key access is recommended
 # sed -i 's/prohibit-password/yes/' /etc/ssh/sshd_config
 
-sed -i -e 's/^PasswordAuthentication yes/PasswordAuthentication no/' -e 's/^PermitRootLogin yes/PermitRootLogin prohibit-password/' etc/ssh/sshd_config
+sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
 apt remove -y cloud-init
 dpkg-reconfigure openssh-server
 sync
