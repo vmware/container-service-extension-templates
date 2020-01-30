@@ -29,7 +29,7 @@ tdnf update tdnf -y
 # tdnf should be improved to handle this better. refer to jira PHO-548
 tdnf update --security --exclude "open-vm-tools,xerces-c,procps-ng"
 
-echo 'installing kuberentes'
+echo 'installing kubernetes'
 tdnf install -yq wget kubernetes-1.14.6-3.ph2 kubernetes-kubeadm-1.14.6-3.ph2
 
 echo 'install docker'
