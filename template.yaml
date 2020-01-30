@@ -3,7 +3,7 @@ templates:
     compute_policy: ""
     cpu: 2
     deprecated: false
-    description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.16.4, weave 2.6.0"
+    description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.16.6, weave 2.6.0"
     mem: 2048
     name: ubuntu-16.04_k8-1.16_weave-2.6.0
     revision: 1
@@ -13,7 +13,7 @@ templates:
     os: "ubuntu-16.04"
     docker_version: "18.09.7"
     kubernetes: "upstream"
-    kubernetes_version: "1.16.4"
+    kubernetes_version: "1.16.6"
     cni: "weave"
     cni_version: "2.6.0"
     upgrade_from:
@@ -23,7 +23,7 @@ templates:
     compute_policy: ""
     cpu: 2
     deprecated: false
-    description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.15.7, weave 2.5.2"
+    description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.15.9, weave 2.5.2"
     mem: 2048
     name: ubuntu-16.04_k8-1.15_weave-2.5.2
     revision: 3
@@ -33,7 +33,7 @@ templates:
     os: "ubuntu-16.04"
     docker_version: "18.09.7"
     kubernetes: "upstream"
-    kubernetes_version: "1.15.7"
+    kubernetes_version: "1.15.9"
     cni: "weave"
     cni_version: "2.5.2"
     upgrade_from:
