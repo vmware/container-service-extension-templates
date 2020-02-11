@@ -75,7 +75,7 @@ templates:
     cni: "weave"
     cni_version: "2.5.2"
     upgrade_from:
-      - ""
+      - "photon-v2_k8-1.14_weave-2.5.2"
   - 
     compute_policy: ""
     cpu: 2
