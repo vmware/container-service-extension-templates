@@ -4,7 +4,7 @@ set -e
 
 echo 'upgrading packages to: kubeadm=1.17.2-00'
 apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acquire::http::Timeout=30 -o Acquire::https::No-Cache=True -o Acquire::https::Timeout=30 -o Acquire::ftp::Timeout=30
-apt-get install -y --allow-change-held-packages kubeadm=1.17.2-00 --allow-unauthenticated
+apt-get install -y --allow-change-held-packages kubeadm=1.17.2-00
 echo 'upgrading kubeadm in worker node'
 kubeadm upgrade node
 
