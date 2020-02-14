@@ -27,7 +27,7 @@ tdnf makecache -q
 echo 'upgrading the system'
 tdnf update tdnf -y
 # tdnf should be improved to handle this better. refer to jira PHO-548
-tdnf update --security --exclude "open-vm-tools,xerces-c,procps-ng" -y
+tdnf update --security --exclude "open-vm-tools,xerces-c,procps-ng"
 
 echo 'installing kuberentes'
 tdnf install -yq wget kubernetes-1.12.7-1.ph2 kubernetes-kubeadm-1.12.7-1.ph2
