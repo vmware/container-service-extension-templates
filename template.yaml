@@ -2,19 +2,19 @@ templates:
   - compute_policy: ""
     cpu: 2
     deprecated: false
-    description: "Ubuntu 16.04, Docker-ce 19.03.8, Kubernetes 1.18.2, weave 2.6.2"
+    description: "Ubuntu 16.04, Docker-ce 19.03.11, Kubernetes 1.18.3, weave 2.6.4"
     mem: 2048
-    name: ubuntu-16.04_k8-1.18_weave-2.6.2
+    name: ubuntu-16.04_k8-1.18_weave-2.6.2=4
     revision: 1
     sha256_ova: 3c1bec8e2770af5b9b0462e20b7b24633666feedff43c099a6fb1330fcc869a9
     source_ova: "https://cloud-images.ubuntu.com/releases/xenial/release-20180418/ubuntu-16.04-server-cloudimg-amd64.ova"
     source_ova_name: ubuntu-16.04-server-cloudimg-amd64.ova
     os: "ubuntu-16.04"
-    docker_version: "19.03.8"
+    docker_version: "19.03.11"
     kubernetes: "upstream"
-    kubernetes_version: "1.18.2"
+    kubernetes_version: "1.18.3"
     cni: "weave"
-    cni_version: "2.6.2"
+    cni_version: "2.6.4"
     upgrade_from:
       - "ubuntu-16.04_k8-1.17_weave-2.6.0"
   -
