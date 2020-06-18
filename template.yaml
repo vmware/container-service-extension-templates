@@ -6,6 +6,7 @@ templates:
     mem: 2048
     name: ubuntu-16.04_k8-1.18_weave-2.6.4
     revision: 1
+    kind: native
     sha256_ova: 3c1bec8e2770af5b9b0462e20b7b24633666feedff43c099a6fb1330fcc869a9
     source_ova: "https://cloud-images.ubuntu.com/releases/xenial/release-20180418/ubuntu-16.04-server-cloudimg-amd64.ova"
     source_ova_name: ubuntu-16.04-server-cloudimg-amd64.ova
