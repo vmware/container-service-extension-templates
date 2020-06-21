@@ -63,7 +63,7 @@ templates:
   - 
     compute_policy: ""
     cpu: 2
-    deprecated: false
+    deprecated: true
     description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.15.9, weave 2.5.2"
     mem: 2048
     name: ubuntu-16.04_k8-1.15_weave-2.5.2
