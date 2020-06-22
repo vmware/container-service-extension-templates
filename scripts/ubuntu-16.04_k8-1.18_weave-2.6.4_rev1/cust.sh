@@ -34,6 +34,7 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acquire::http::Timeout=30 -o Acquire::https::No-Cache=True -o Acquire::https::Timeout=30 -o Acquire::ftp::Timeout=30
 apt-get -q install -y docker-ce=5:19.03.11~3-0~ubuntu-xenial
 apt-get -q install -y kubelet=1.18.3-00 kubeadm=1.18.3-00 kubectl=1.18.3-00 kubernetes-cni=0.7.5-00
+apt-get -q install -y docker-ce-cli=5:19.03.11~3-0~ubuntu-xenial --allow-downgrades
 systemctl restart docker
 while [ `systemctl is-active docker` != 'active' ]; do echo 'waiting for docker'; sleep 5; done
 
@@ -45,6 +46,7 @@ systemctl disable nfs-kernel-server.service
 # prevent updates to software that CSE depends on
 apt-mark hold open-vm-tools
 apt-mark hold docker-ce
+apt-mark hold docker-ce-cli
 apt-mark hold kubelet
 apt-mark hold kubeadm
 apt-mark hold kubectl
