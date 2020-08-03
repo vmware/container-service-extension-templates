@@ -43,7 +43,7 @@ templates:
     compute_policy: ""
     cpu: 2
     deprecated: false
-    description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.16.6, weave 2.6.0"
+    description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.16.13, weave 2.6.0"
     mem: 2048
     name: ubuntu-16.04_k8-1.16_weave-2.6.0
     revision: 2
@@ -54,7 +54,7 @@ templates:
     os: "ubuntu-16.04"
     docker_version: "18.09.7"
     kubernetes: "upstream"
-    kubernetes_version: "1.16.6"
+    kubernetes_version: "1.16.13"
     cni: "weave"
     cni_version: "2.6.0"
     upgrade_from:
