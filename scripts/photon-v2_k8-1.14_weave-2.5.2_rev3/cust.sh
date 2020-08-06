@@ -26,7 +26,7 @@ tdnf makecache -q
 tdnf update tdnf -y
 
 echo 'installing kubernetes'
-tdnf install -yq wget kubernetes-1.14.6-3.ph2 kubernetes-kubeadm-1.14.6-3.ph2
+tdnf install -yq wget kubernetes-1.14.10-2.ph2 kubernetes-kubeadm-1.14.10-2.ph2
 
 echo 'installing docker'
 tdnf install -yq docker-18.06.2-6.ph2
