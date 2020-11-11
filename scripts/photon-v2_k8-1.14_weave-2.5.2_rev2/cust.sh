@@ -21,6 +21,11 @@ chmod 0644 /etc/systemd/system/iptables-ports.service
 systemctl enable iptables-ports.service
 systemctl start iptables-ports.service
 
+# update public repository to point to packages.vmware.com
+pushd /etc/yum.repos.d
+sed -i 's/dl.bintray.com\/vmware/packages.vmware.com\/photon\/$releasever/g' photon.repo photon-updates.repo photon-extras.repo photon-debuginfo.repo
+popd
+
 # update repo info (needed for docker update)
 tdnf makecache -q
 tdnf update tdnf -y
