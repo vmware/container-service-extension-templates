@@ -91,7 +91,7 @@ templates:
     revision: 3
     kind: native
     sha256_ova: cb51e4b6d899c3588f961e73282709a0d054bb421787e140a1d80c24d4fd89e1
-    source_ova: "http://dl.bintray.com/vmware/photon/2.0/GA/ova/photon-custom-hw11-2.0-304b817.ova"
+    source_ova: "https://packages.vmware.com/photon/2.0/GA/ova/photon-custom-hw11-2.0-304b817.ova"
     source_ova_name: photon-custom-hw11-2.0-304b817.ova
     os: "photon-v2"
     docker_version: "18.06.2-6"
