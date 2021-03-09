@@ -21,9 +21,6 @@ resize2fs /dev/sda1 || :
 systemctl restart networking.service
 while [ `systemctl is-active networking` != 'active' ]; do echo 'waiting for network'; sleep 5; done
 
-# Download weave.yml to /root/weave.yml
-wget --no-verbose -O /root/weave.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.6.0"
-
 echo 'installing kubernetes'
 export DEBIAN_FRONTEND=noninteractive
 apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acquire::http::Timeout=30 -o Acquire::https::No-Cache=True -o Acquire::https::Timeout=30 -o Acquire::ftp::Timeout=30
@@ -58,6 +55,10 @@ apt-mark hold nfs-kernel-server
 echo 'upgrading the system'
 apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acquire::http::Timeout=30 -o Acquire::https::No-Cache=True -o Acquire::https::Timeout=30 -o Acquire::ftp::Timeout=30
 apt-get -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade
+
+# Download weave.yml to /root/weave.yml
+export kubever=$(kubectl version --client | base64 | tr -d '\n')
+wget --no-verbose -O /root/weave.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.6.0"
 
 # /etc/machine-id must be empty so that new machine-id gets assigned on boot (in our case boot is vApp deployment)
 # https://jaylacroix.com/fixing-ubuntu-18-04-virtual-machines-that-fight-over-the-same-ip-address/

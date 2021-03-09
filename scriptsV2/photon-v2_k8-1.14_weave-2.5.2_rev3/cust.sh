@@ -30,9 +30,6 @@ popd
 tdnf makecache -q
 tdnf update tdnf -y
 
-# Download weave.yml to /root/weave.yml
-wget --no-verbose -O /root/weave.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.5.2"
-
 echo 'installing kubernetes'
 tdnf install -yq wget kubernetes-1.14.10-2.ph2 kubernetes-kubeadm-1.14.10-2.ph2
 
@@ -52,6 +49,10 @@ tdnf update tdnf -y
 # this update needs to be the last step due to required reboot after kernel update (https://bbs.archlinux.org/viewtopic.php?id=203966)
 # tdnf should be improved to handle dependent package exclusion better. refer to jira PHO-548
 tdnf update --security --exclude "open-vm-tools,xerces-c,procps-ng,docker,kubernetes,kubernetes-kubeadm" -y
+
+# Download weave.yml to /root/weave.yml
+export kubever=$(kubectl version --client | base64 | tr -d '\n')
+wget --no-verbose -O /root/weave.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.5.2"
 
 # /etc/machine-id must be empty so that new machine-id gets assigned on boot (in our case boot is vApp deployment)
 echo -n > /etc/machine-id
