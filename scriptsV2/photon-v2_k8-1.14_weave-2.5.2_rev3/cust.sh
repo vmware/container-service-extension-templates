@@ -52,7 +52,7 @@ tdnf update --security --exclude "open-vm-tools,xerces-c,procps-ng,docker,kubern
 
 # Download weave.yml to /root/weave.yml
 export kubever=$(kubectl version --client | base64 | tr -d '\n')
-wget --no-verbose -O /root/weave.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.5.2"
+wget --no-verbose -O /root/weave_v2-5-2.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.5.2"
 
 # /etc/machine-id must be empty so that new machine-id gets assigned on boot (in our case boot is vApp deployment)
 echo -n > /etc/machine-id
