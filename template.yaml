@@ -1,6 +1,3 @@
-# NOTE: This template cookbook is deprecated.
-# CSE versions <= 3.0 can continue to use this template cookbook.
-# CSE versions >= 3.1 must begin to use new /templateV2.yaml
 templates:
   - compute_policy: ""
     cpu: 2
