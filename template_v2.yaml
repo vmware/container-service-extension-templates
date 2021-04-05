@@ -21,7 +21,7 @@ templates:
     min_cse_version: "3.1"
     max_cse_version: "3.1"
   -
-  - compute_policy: ""
+    compute_policy: ""
     cpu: 2
     deprecated: false
     description: "Ubuntu 16.04, Docker-ce 19.03.12, Kubernetes 1.19.3, weave 2.6.5"
