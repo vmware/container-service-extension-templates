@@ -5,6 +5,26 @@ templates:
   - compute_policy: ""
     cpu: 2
     deprecated: false
+    description: "Ubuntu 16.04, Docker-ce 19.03.15, Kubernetes 1.20.5, weave 2.6.5"
+    mem: 2048
+    name: ubuntu-16.04_k8-1.20_weave-2.6.5
+    revision: 1
+    kind: native
+    sha256_ova: 3c1bec8e2770af5b9b0462e20b7b24633666feedff43c099a6fb1330fcc869a9
+    source_ova: "https://cloud-images.ubuntu.com/releases/xenial/release-20180418/ubuntu-16.04-server-cloudimg-amd64.ova"
+    source_ova_name: ubuntu-16.04-server-cloudimg-amd64.ova
+    os: "ubuntu-16.04"
+    docker_version: "19.03.15"
+    kubernetes: "upstream"
+    kubernetes_version: "1.20.5"
+    cni: "weave"
+    cni_version: "2.6.5"
+    upgrade_from:
+      - "ubuntu-16.04_k8-1.19_weave-2.6.5"
+  -
+    compute_policy: ""
+    cpu: 2
+    deprecated: false
     description: "Ubuntu 16.04, Docker-ce 19.03.12, Kubernetes 1.19.3, weave 2.6.5"
     mem: 2048
     name: ubuntu-16.04_k8-1.19_weave-2.6.5

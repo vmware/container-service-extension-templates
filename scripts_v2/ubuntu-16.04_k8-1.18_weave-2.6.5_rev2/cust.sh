@@ -56,7 +56,7 @@ echo 'upgrading the system'
 apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acquire::http::Timeout=30 -o Acquire::https::No-Cache=True -o Acquire::https::Timeout=30 -o Acquire::ftp::Timeout=30
 apt-get -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade
 
-# Download weave.yml to /root/weave.yml
+# Download weave.yml to /root/weave_v2-6-5.yml
 export kubever=$(kubectl version --client | base64 | tr -d '\n')
 wget --no-verbose -O /root/weave_v2-6-5.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.6.5"
 
