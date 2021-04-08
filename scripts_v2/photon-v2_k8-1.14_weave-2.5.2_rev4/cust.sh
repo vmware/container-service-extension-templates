@@ -50,7 +50,7 @@ tdnf update tdnf -y
 # tdnf should be improved to handle dependent package exclusion better. refer to jira PHO-548
 tdnf update --security --exclude "open-vm-tools,xerces-c,procps-ng,docker,kubernetes,kubernetes-kubeadm" -y
 
-# Download weave.yml to /root/weave.yml
+# Download weave.yml to /root/weave_v2-5-2.yml
 export kubever=$(kubectl version --client | base64 | tr -d '\n')
 wget --no-verbose -O /root/weave_v2-5-2.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.5.2"
 
