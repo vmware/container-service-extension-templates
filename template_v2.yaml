@@ -18,8 +18,8 @@ templates:
     cni_version: "2.6.5"
     upgrade_from:
       - "ubuntu-16.04_k8-1.19_weave-2.6.5"
-    min_cse_version: "3.1"
-    max_cse_version: "3.1"
+    min_cse_version: "3.1.0"
+    max_cse_version: "3.1.0"
   -
     compute_policy: ""
     cpu: 2
@@ -40,8 +40,8 @@ templates:
     cni_version: "2.6.5"
     upgrade_from:
       - "ubuntu-16.04_k8-1.18_weave-2.6.5"
-    min_cse_version: "3.1"
-    max_cse_version: "3.1"
+    min_cse_version: "3.1.0"
+    max_cse_version: "3.1.0"
   -
     compute_policy: ""
     cpu: 2
@@ -63,8 +63,8 @@ templates:
     upgrade_from:
       - "ubuntu-16.04_k8-1.17_weave-2.6.0"
       - "ubuntu-16.04_k8-1.18_weave-2.6.5"
-    min_cse_version: "3.1"
-    max_cse_version: "3.1"
+    min_cse_version: "3.1.0"
+    max_cse_version: "3.1.0"
   -
     compute_policy: ""
     cpu: 2
@@ -86,8 +86,8 @@ templates:
     upgrade_from:
       - "ubuntu-16.04_k8-1.16_weave-2.6.0"
       - "ubuntu-16.04_k8-1.17_weave-2.6.0"
-    min_cse_version: "3.1"
-    max_cse_version: "3.1"
+    min_cse_version: "3.1.0"
+    max_cse_version: "3.1.0"
   - 
     compute_policy: ""
     cpu: 2
@@ -109,8 +109,8 @@ templates:
     upgrade_from:
       - "ubuntu-16.04_k8-1.15_weave-2.5.2"
       - "ubuntu-16.04_k8-1.16_weave-2.6.0"
-    min_cse_version: "3.1"
-    max_cse_version: "3.1"
+    min_cse_version: "3.1.0"
+    max_cse_version: "3.1.0"
   - 
     compute_policy: ""
     cpu: 2
@@ -131,5 +131,5 @@ templates:
     cni_version: "2.5.2"
     upgrade_from:
       - "photon-v2_k8-1.14_weave-2.5.2"
-    min_cse_version: "3.1"
-    max_cse_version: "3.1"
+    min_cse_version: "3.1.0"
+    max_cse_version: "3.1.0"
