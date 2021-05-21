@@ -1,11 +1,12 @@
 # NOTE: This template cookbook is deprecated.
 # CSE versions <= 3.0 can continue to use this template cookbook.
-# CSE versions >= 3.1 must begin to use new /templateV2.yaml
+# CSE versions >= 3.1 must begin to use new /template_v2.yaml
 templates:
-  - compute_policy: ""
+  -
+    compute_policy: ""
     cpu: 2
     deprecated: false
-    description: "Ubuntu 16.04, Docker-ce 19.03.15, Kubernetes 1.20.5, weave 2.6.5"
+    description: "Ubuntu 16.04, Docker-ce 19.03.15, Kubernetes 1.20.6, weave 2.6.5"
     mem: 2048
     name: ubuntu-16.04_k8-1.20_weave-2.6.5
     revision: 2
