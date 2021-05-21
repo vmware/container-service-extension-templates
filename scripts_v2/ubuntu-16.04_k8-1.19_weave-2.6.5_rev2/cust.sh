@@ -51,6 +51,7 @@ apt-mark hold kubectl
 apt-mark hold kubernetes-cni
 apt-mark hold nfs-common
 apt-mark hold nfs-kernel-server
+apt-mark hold shim-signed
 
 echo 'upgrading the system'
 apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acquire::http::Timeout=30 -o Acquire::https::No-Cache=True -o Acquire::https::Timeout=30 -o Acquire::ftp::Timeout=30

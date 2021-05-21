@@ -6,7 +6,6 @@ mkdir -p /root/.kube
 cp -f /etc/kubernetes/admin.conf /root/.kube/config
 chown $(id -u):$(id -g) /root/.kube/config
 
-export kubever=$(kubectl version --client | base64 | tr -d '\n')
 kubectl apply -f /root/weave_v2-6-0.yml
 systemctl restart kubelet
 while [ `systemctl is-active kubelet` != 'active' ]; do echo 'waiting for kubelet'; sleep 5; done

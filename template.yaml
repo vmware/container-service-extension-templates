@@ -16,7 +16,7 @@ templates:
     os: "ubuntu-16.04"
     docker_version: "19.03.15"
     kubernetes: "upstream"
-    kubernetes_version: "1.20.5"
+    kubernetes_version: "1.20.6"
     cni: "weave"
     cni_version: "2.6.5"
     upgrade_from:
@@ -28,7 +28,7 @@ templates:
     description: "Ubuntu 16.04, Docker-ce 19.03.12, Kubernetes 1.19.3, weave 2.6.5"
     mem: 2048
     name: ubuntu-16.04_k8-1.19_weave-2.6.5
-    revision: 3
+    revision: 2
     kind: native
     sha256_ova: 3c1bec8e2770af5b9b0462e20b7b24633666feedff43c099a6fb1330fcc869a9
     source_ova: "https://cloud-images.ubuntu.com/releases/xenial/release-20180418/ubuntu-16.04-server-cloudimg-amd64.ova"
@@ -48,7 +48,7 @@ templates:
     description: "Ubuntu 16.04, Docker-ce 19.03.12, Kubernetes 1.18.6, weave 2.6.5"
     mem: 2048
     name: ubuntu-16.04_k8-1.18_weave-2.6.5
-    revision: 3
+    revision: 2
     kind: native
     sha256_ova: 3c1bec8e2770af5b9b0462e20b7b24633666feedff43c099a6fb1330fcc869a9
     source_ova: "https://cloud-images.ubuntu.com/releases/xenial/release-20180418/ubuntu-16.04-server-cloudimg-amd64.ova"
@@ -65,11 +65,11 @@ templates:
   -
     compute_policy: ""
     cpu: 2
-    deprecated: false
+    deprecated: true
     description: "Ubuntu 16.04, Docker-ce 19.03.5, Kubernetes 1.17.9, weave 2.6.0"
     mem: 2048
     name: ubuntu-16.04_k8-1.17_weave-2.6.0
-    revision: 4
+    revision: 3
     kind: native
     sha256_ova: 3c1bec8e2770af5b9b0462e20b7b24633666feedff43c099a6fb1330fcc869a9
     source_ova: "https://cloud-images.ubuntu.com/releases/xenial/release-20180418/ubuntu-16.04-server-cloudimg-amd64.ova"
@@ -83,28 +83,7 @@ templates:
     upgrade_from:
       - "ubuntu-16.04_k8-1.16_weave-2.6.0"
       - "ubuntu-16.04_k8-1.17_weave-2.6.0"
-  - 
-    compute_policy: ""
-    cpu: 2
-    deprecated: true
-    description: "Ubuntu 16.04, Docker-ce 18.09.7, Kubernetes 1.16.13, weave 2.6.0"
-    mem: 2048
-    name: ubuntu-16.04_k8-1.16_weave-2.6.0
-    revision: 4
-    kind: native
-    sha256_ova: 3c1bec8e2770af5b9b0462e20b7b24633666feedff43c099a6fb1330fcc869a9
-    source_ova: "https://cloud-images.ubuntu.com/releases/xenial/release-20180418/ubuntu-16.04-server-cloudimg-amd64.ova"
-    source_ova_name: ubuntu-16.04-server-cloudimg-amd64.ova
-    os: "ubuntu-16.04"
-    docker_version: "18.09.7"
-    kubernetes: "upstream"
-    kubernetes_version: "1.16.13"
-    cni: "weave"
-    cni_version: "2.6.0"
-    upgrade_from:
-      - "ubuntu-16.04_k8-1.15_weave-2.5.2"
-      - "ubuntu-16.04_k8-1.16_weave-2.6.0"
-  - 
+  -
     compute_policy: ""
     cpu: 2
     deprecated: false
@@ -114,7 +93,7 @@ templates:
     revision: 3
     kind: native
     sha256_ova: cb51e4b6d899c3588f961e73282709a0d054bb421787e140a1d80c24d4fd89e1
-    source_ova: "http://dl.bintray.com/vmware/photon/2.0/GA/ova/photon-custom-hw11-2.0-304b817.ova"
+    source_ova: "https://packages.vmware.com/photon/2.0/GA/ova/photon-custom-hw11-2.0-304b817.ova"
     source_ova_name: photon-custom-hw11-2.0-304b817.ova
     os: "photon-v2"
     docker_version: "18.06.2-6"
