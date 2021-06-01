@@ -1,6 +1,6 @@
+version: '2.0'
+scripts_directory: scripts_v2
 templates:
-  version: '2.0'
-  scripts_directory: 'scripts_v2'
   - compute_policy: ""
     cpu: 2
     deprecated: false
