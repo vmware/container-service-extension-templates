@@ -1,4 +1,6 @@
 templates:
+  version: '2.0'
+  scripts_directory: 'scripts_v2'
   - compute_policy: ""
     cpu: 2
     deprecated: false
@@ -88,7 +90,7 @@ templates:
       - "ubuntu-16.04_k8-1.17_weave-2.6.0"
     min_cse_version: "3.1.0"
     max_cse_version: "3.1.0"
-  - 
+  -
     compute_policy: ""
     cpu: 2
     deprecated: true
@@ -111,7 +113,7 @@ templates:
       - "ubuntu-16.04_k8-1.16_weave-2.6.0"
     min_cse_version: "3.1.0"
     max_cse_version: "3.1.0"
-  - 
+  -
     compute_policy: ""
     cpu: 2
     deprecated: false
