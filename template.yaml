@@ -1,7 +1,7 @@
 # NOTE: This template cookbook is deprecated.
 # CSE versions <= 3.0 can continue to use this template cookbook.
 # CSE versions >= 3.1 must begin to use new /templateV2.yaml
-version: '1.0'
+version: '1.0.0'
 scripts_directory: scripts
 templates:
   - compute_policy: ""
