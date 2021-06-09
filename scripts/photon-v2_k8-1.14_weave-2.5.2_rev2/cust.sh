@@ -21,6 +21,11 @@ chmod 0644 /etc/systemd/system/iptables-ports.service
 systemctl enable iptables-ports.service
 systemctl start iptables-ports.service
 
+# update public repository to point to packages.vmware.com
+pushd /etc/yum.repos.d
+sed -i 's/dl.bintray.com\/vmware/packages.vmware.com\/photon\/$releasever/g' photon.repo photon-updates.repo photon-extras.repo photon-debuginfo.repo
+popd
+
 # update repo info (needed for docker update)
 tdnf makecache -q
 tdnf update tdnf -y
@@ -43,7 +48,7 @@ echo 'upgrading security packages'
 tdnf update tdnf -y
 # this update needs to be the last step due to required reboot after kernel update (https://bbs.archlinux.org/viewtopic.php?id=203966)
 # tdnf should be improved to handle dependent package exclusion better. refer to jira PHO-548
-tdnf update --security --exclude "open-vm-tools,xerces-c,procps-ng,docker" -y
+tdnf update --security --exclude "open-vm-tools,xerces-c,procps-ng,docker,kubernetes,kubernetes-kubeadm" -y
 
 # /etc/machine-id must be empty so that new machine-id gets assigned on boot (in our case boot is vApp deployment)
 echo -n > /etc/machine-id
