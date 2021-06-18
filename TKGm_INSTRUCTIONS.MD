@@ -1,17 +1,17 @@
 # How to Enable TKGm with CSE 3.0.3
 
 ## Software requirements
-TKGm can be enabled with CSE 3.0.3 only if VCD 10.2.2 or some VCD 10.2.z
+TKGm can be enabled with CSE 3.0.3 only if VCD 10.2.z (z being 2 or above)
 update release is being used to provide the infrastructure, any other
 version of VCD should not be used.
 
 ## Steps for Cloud Provider (Cloud Administrator)
 Provider needs to
-* Enable CSE server for TKGm
+* Enable TKGm on CSE server
 * Create TKGm template
 * Enable Tenant OrgVDC for TKGm
 
-### Enabling CSE server for TKGm
+### Enabling TKGm on CSE server
 Generate CSE config file via `cse sample` command. Fill up the relevant details.
 Add the following key in the config file
 ```sh
@@ -21,9 +21,9 @@ service:
 Edit the `remote_template_cookbook_url` value under `broker` section to 
 ```sh
 broker:
-  remote_template_cookbook_url: "https://raw.githubusercontent.com/ltimothy7/container-service-extension-templates/tkgm/template.yaml"
+  remote_template_cookbook_url: "https://raw.githubusercontent.com/vmware/container-service-extension-templates/tkgm/template.yaml"
 ```
-Freshly install CSE 3.0.3 or upgrade existing CSE to CSE 3.0.3, using this
+Fresh install CSE 3.0.3 or upgrade existing CSE to CSE 3.0.3, using this
 config file.
 
 ### Creating TKGm template
