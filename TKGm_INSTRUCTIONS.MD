@@ -54,11 +54,11 @@ export CSE_TKG_M_ENABLED=True
 
 The following command will enable `TKGm` runtime on a specific OrgVDC,
 ```sh
-vcd cse ovdc enable [OrgVDC name] -o [Org name] --tkg-m
+vcd cse ovdc enable [OrgVDC name] -o [Org name] --tkg
 ```
 Similarly to revoke TKGm runtime support from a specific OrgVDC, run
 ```sh
-vcd cse ovdc disable [OrgVDC name] -o [Org name] --tkg-m
+vcd cse ovdc disable [OrgVDC name] -o [Org name] --tkg
 ```
 
 ## Steps for Tenant users
@@ -72,7 +72,7 @@ export CSE_TKG_M_ENABLED=True
 To deploy TKGm clusters, they can generate the sample specification yaml
 for `vcd cse cluster apply` command via
 ```sh
-vcd cse cluster apply --sample --tkg-m
+vcd cse cluster apply --sample --tkg
 ```
 Example,
 ```sh
