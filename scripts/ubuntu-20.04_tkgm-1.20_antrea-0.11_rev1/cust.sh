@@ -43,9 +43,9 @@ apt-get -q install -y kubernetes-cni=0.8.7-00 # kubernetes-cni is needed for kub
 apt-get -q install -y docker-ce=5:19.03.15~3-0~ubuntu-focal docker-ce-cli=5:19.03.15~3-0~ubuntu-focal containerd.io
 systemctl restart docker
 while [ `systemctl is-active docker` != 'active' ]; do echo 'waiting for docker'; sleep 5; done
-wget https://github.com/ltimothy7/container-service-extension-templates/raw/tkgm/tkgm_build_artifacts/1_3_0/kubeadm_1.20.4%2Bvmware.1-1_amd64.deb
-wget https://github.com/ltimothy7/container-service-extension-templates/raw/tkgm/tkgm_build_artifacts/1_3_0/kubectl_1.20.4%2Bvmware.1-1_amd64.deb
-wget https://github.com/ltimothy7/container-service-extension-templates/raw/tkgm/tkgm_build_artifacts/1_3_0/kubelet_1.20.4%2Bvmware.1-1_amd64.deb
+wget https://github.com/vmware/container-service-extension-templates/raw/tkgm/tkgm_build_artifacts/1_3_0/kubeadm_1.20.4%2Bvmware.1-1_amd64.deb
+wget https://github.com/vmware/container-service-extension-templates/raw/tkgm/tkgm_build_artifacts/1_3_0/kubectl_1.20.4%2Bvmware.1-1_amd64.deb
+wget https://github.com/vmware/container-service-extension-templates/raw/tkgm/tkgm_build_artifacts/1_3_0/kubelet_1.20.4%2Bvmware.1-1_amd64.deb
 # Installing all three at once since they depend on one another
 apt install -y ./kubeadm_1.20.4+vmware.1-1_amd64.deb ./kubectl_1.20.4+vmware.1-1_amd64.deb ./kubelet_1.20.4+vmware.1-1_amd64.deb
 systemctl restart kubelet
