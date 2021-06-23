@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-kubernetes_version=v1.20.6
+kubernetes_version=v1.21.2
 weave_version=2.8.1
 
 versioned_weave_file="/root/weave_v$(echo {weave_version} | sed -r 's/\./\-/g').yml"
