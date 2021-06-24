@@ -2,7 +2,7 @@
 
 ## Software requirements
 TKGm can be enabled with CSE 3.0.3 only if VCD 10.2.z (z being 2 or above)
-update release is being used to provide the infrastructure, any other
+update release is being used to provide the infrastructure. Any other
 version of VCD should not be used.
 
 ## Steps for Cloud Provider (Cloud Administrator)
