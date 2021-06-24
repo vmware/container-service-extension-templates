@@ -3,7 +3,7 @@
 set -e
 
 weave_version=2.8.1
-versioned_weave_file="/root/weave_v$(echo {weave_version} | sed -r 's/\./\-/g').yml"
+versioned_weave_file="/root/weave_v$(echo $weave_version | sed -r 's/\./\-/g').yml"
 
 export kubever=$(kubectl version --client | base64 | tr -d '\n')
 wget --no-verbose -O $versioned_weave_file "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=$weave_version"

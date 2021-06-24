@@ -27,7 +27,7 @@ docker_ce_version=5:20.10.7~3-0~ubuntu-xenial
 kubernetes_tools_version=1.21.2-00
 kubernetes_cni_version=0.8.7-00
 weave_version=2.8.1
-versioned_weave_file="/root/weave_v$(echo {weave_version} | sed -r 's/\./\-/g').yml"
+versioned_weave_file="/root/weave_v$(echo $weave_version | sed -r 's/\./\-/g').yml"
 export DEBIAN_FRONTEND=noninteractive
 
 apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acquire::http::Timeout=30 -o Acquire::https::No-Cache=True -o Acquire::https::Timeout=30 -o Acquire::ftp::Timeout=30
