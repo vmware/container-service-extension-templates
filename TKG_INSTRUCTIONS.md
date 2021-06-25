@@ -98,4 +98,4 @@ vcd cse cluster apply [specification yaml]
 ```
 to deploy TKG clusters.
 
-Read more about TKG at [here](Link to Anupam's blog).
+Read more about TKG at [here](https://blogs.vmware.com/cloudprovider/?p=17426).
