@@ -22,6 +22,7 @@ templates:
     cni: "weave"
     cni_version: "2.8.1"
     upgrade_from:
+      - "ubuntu-16.04_k8-1.21_weave-2.8.1"
       - "ubuntu-16.04_k8-1.20_weave-2.6.5"
   - compute_policy: ""
     cpu: 2
