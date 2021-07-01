@@ -32,9 +32,20 @@ deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acquire::http::Timeout=30 -o Acquire::https::No-Cache=True -o Acquire::https::Timeout=30 -o Acquire::ftp::Timeout=30
+<<<<<<< HEAD
 apt-get -q install -y docker-ce=5:19.03.15~3-0~ubuntu-xenial
 apt-get -q install -y kubelet=1.20.6-00 kubeadm=1.20.6-00 kubectl=1.20.6-00 kubernetes-cni=0.8.7-00
 
+=======
+<<<<<<< HEAD:scripts_v2/ubuntu-16.04_k8-1.16_weave-2.6.0_rev3/cust.sh
+apt-get -q install -y docker-ce=5:18.09.7~3-0~ubuntu-xenial
+apt-get -q install -y kubelet=1.16.13-00 kubeadm=1.16.13-00 kubectl=1.16.13-00 kubernetes-cni=0.8.6-00
+
+=======
+apt-get -q install -y docker-ce=5:19.03.15~3-0~ubuntu-xenial
+apt-get -q install -y kubelet=1.20.6-00 kubeadm=1.20.6-00 kubectl=1.20.6-00 kubernetes-cni=0.8.7-00
+>>>>>>> e1288f332fab5f500e044cf1a2c074848852cc88:scripts/ubuntu-16.04_k8-1.20_weave-2.6.5_rev1/cust.sh
+>>>>>>> e1288f332fab5f500e044cf1a2c074848852cc88
 systemctl restart docker
 while [ `systemctl is-active docker` != 'active' ]; do echo 'waiting for docker'; sleep 5; done
 
@@ -57,7 +68,15 @@ echo 'upgrading the system'
 apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acquire::http::Timeout=30 -o Acquire::https::No-Cache=True -o Acquire::https::Timeout=30 -o Acquire::ftp::Timeout=30
 apt-get -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade
 
+<<<<<<< HEAD
 # Download weave.yml to /root/weave_v2-6-5.yml
+=======
+<<<<<<< HEAD:scripts_v2/ubuntu-16.04_k8-1.16_weave-2.6.0_rev3/cust.sh
+# Download weave.yml to /root/weave_v2-6-0.yml
+=======
+# Download weave.yml to /root/weave_v2-6-5.yml
+>>>>>>> e1288f332fab5f500e044cf1a2c074848852cc88:scripts/ubuntu-16.04_k8-1.20_weave-2.6.5_rev1/cust.sh
+>>>>>>> e1288f332fab5f500e044cf1a2c074848852cc88
 export kubever=$(kubectl version --client | base64 | tr -d '\n')
 wget --no-verbose -O /root/weave_v2-6-5.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.6.5"
 
