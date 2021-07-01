@@ -34,7 +34,6 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acquire::http::Timeout=30 -o Acquire::https::No-Cache=True -o Acquire::https::Timeout=30 -o Acquire::ftp::Timeout=30
 apt-get -q install -y docker-ce=5:18.09.7~3-0~ubuntu-xenial
 apt-get -q install -y kubelet=1.16.13-00 kubeadm=1.16.13-00 kubectl=1.16.13-00 kubernetes-cni=0.8.6-00
-
 systemctl restart docker
 while [ `systemctl is-active docker` != 'active' ]; do echo 'waiting for docker'; sleep 5; done
 
