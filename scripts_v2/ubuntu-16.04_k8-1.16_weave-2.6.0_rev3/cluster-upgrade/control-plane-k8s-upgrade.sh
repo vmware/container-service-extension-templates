@@ -9,7 +9,6 @@ apt-get -q install -y kubelet=1.16.13-00 kubeadm=1.16.13-00 kubectl=1.16.13-00 k
 apt-mark hold kubeadm kubelet kubectl kubernetes-cni
 
 echo 'upgrading kubeadm to v1.16.13'
-
 while [ `systemctl is-active kubelet` != 'active' ]; do echo 'waiting for kubelet'; sleep 5; done
 # sometimes master will be in 'NotReady' state for a short period
 # api server needs to answer 'OK' to `/healthz`
@@ -17,7 +16,6 @@ while [ `systemctl is-active kubelet` != 'active' ]; do echo 'waiting for kubele
 # upgrade needs to go through various checks
 # master readiness check is not sufficient: while [ `kubectl get nodes | awk '/master/ {print $2}'` != 'Ready,SchedulingDisabled' ]; do echo 'waiting for master to be ready'; sleep 5; done
 sleep 120
-
 kubeadm upgrade apply v1.16.13 -y
 
 systemctl restart kubelet
