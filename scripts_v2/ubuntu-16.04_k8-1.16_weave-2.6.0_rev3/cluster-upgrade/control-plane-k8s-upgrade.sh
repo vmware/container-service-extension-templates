@@ -2,9 +2,12 @@
 
 set -e
 
-echo 'upgrading packages to: kubeadm=1.20.6-00'
+
+echo 'upgrading packages to: kubelet=1.16.13-00 kubeadm=1.16.13-00 kubectl=1.16.13-00 kubernetes-cni=0.8.6-00'
+apt-mark unhold kubeadm kubelet kubectl kubernetes-cni
 apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acquire::http::Timeout=30 -o Acquire::https::No-Cache=True -o Acquire::https::Timeout=30 -o Acquire::ftp::Timeout=30
-apt-get install -y --allow-change-held-packages kubeadm=1.20.6-00 kubernetes-cni=0.8.7-00
+apt-get -q install -y kubelet=1.16.13-00 kubeadm=1.16.13-00 kubectl=1.16.13-00 kubernetes-cni=0.8.6-00
+apt-mark hold kubeadm kubelet kubectl kubernetes-cni
 
 echo 'upgrading kubeadm to v1.16.13'
 while [ `systemctl is-active kubelet` != 'active' ]; do echo 'waiting for kubelet'; sleep 5; done

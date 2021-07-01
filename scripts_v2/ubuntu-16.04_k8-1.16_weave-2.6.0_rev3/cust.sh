@@ -58,7 +58,7 @@ apt-get -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-c
 
 # Download weave.yml to /root/weave_v2-6-0.yml
 export kubever=$(kubectl version --client | base64 | tr -d '\n')
-wget --no-verbose -O /root/weave_v2-6-5.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.6.5"
+wget --no-verbose -O /root/weave_v2-6-0.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.6.0"
 
 # /etc/machine-id must be empty so that new machine-id gets assigned on boot (in our case boot is vApp deployment)
 # https://jaylacroix.com/fixing-ubuntu-18-04-virtual-machines-that-fight-over-the-same-ip-address/
