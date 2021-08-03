@@ -55,6 +55,7 @@ export kubever=$(kubectl version --client | base64 | tr -d '\n')
 wget --no-verbose -O /root/weave_v2-5-2.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.5.2"
 
 vmware-toolbox-cmd config set deployPkg enable-custom-script true
+vmware-toolbox-cmd config set deployPkg enable-custom-scripts true
 
 # /etc/machine-id must be empty so that new machine-id gets assigned on boot (in our case boot is vApp deployment)
 echo -n > /etc/machine-id
