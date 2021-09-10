@@ -21,7 +21,7 @@ templates:
       - "ubuntu-16.04_k8-1.21_weave-2.8.1"
       - "ubuntu-16.04_k8-1.20_weave-2.6.5"
     min_cse_version: "3.1.0"
-    max_cse_version: "3.1.0"
+    max_cse_version: "3.1.1"
   - cpu: 2
     deprecated: false
     description: "Ubuntu 16.04, Docker-ce 19.03.15, Kubernetes 1.20.6, weave 2.6.5"
@@ -42,7 +42,7 @@ templates:
       - "ubuntu-16.04_k8-1.20_weave-2.6.5"
       - "ubuntu-16.04_k8-1.19_weave-2.6.5"
     min_cse_version: "3.1.0"
-    max_cse_version: "3.1.0"
+    max_cse_version: "3.1.1"
   - cpu: 2
     deprecated: false
     description: "Ubuntu 16.04, Docker-ce 19.03.12, Kubernetes 1.19.3, weave 2.6.5"
@@ -63,7 +63,7 @@ templates:
       - "ubuntu-16.04_k8-1.19_weave-2.6.5"
       - "ubuntu-16.04_k8-1.18_weave-2.6.5"
     min_cse_version: "3.1.0"
-    max_cse_version: "3.1.0"
+    max_cse_version: "3.1.1"
   - cpu: 2
     deprecated: false
     description: "Ubuntu 16.04, Docker-ce 19.03.12, Kubernetes 1.18.6, weave 2.6.5"
@@ -84,7 +84,7 @@ templates:
       - "ubuntu-16.04_k8-1.17_weave-2.6.0"
       - "ubuntu-16.04_k8-1.18_weave-2.6.5"
     min_cse_version: "3.1.0"
-    max_cse_version: "3.1.0"
+    max_cse_version: "3.1.1"
   - cpu: 2
     deprecated: false
     description: "PhotonOS v2, Docker-ce 18.06.2-6, Kubernetes 1.14.10, weave 2.5.2"
@@ -104,4 +104,4 @@ templates:
     upgrade_from:
       - "photon-v2_k8-1.14_weave-2.5.2"
     min_cse_version: "3.1.0"
-    max_cse_version: "3.1.0"
+    max_cse_version: "3.1.1"
