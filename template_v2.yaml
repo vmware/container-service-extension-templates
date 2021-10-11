@@ -86,7 +86,7 @@ templates:
     min_cse_version: "3.1.0"
     max_cse_version: "3.1.1"
   - cpu: 2
-    deprecated: false
+    deprecated: true
     description: "PhotonOS v2, Docker-ce 18.06.2-6, Kubernetes 1.14.10, weave 2.5.2"
     mem: 2048
     name: photon-v2_k8-1.14_weave-2.5.2
