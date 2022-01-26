@@ -8,23 +8,30 @@ echo 'net.ipv6.conf.default.disable_ipv6 = 1' >> /etc/sysctl.conf
 echo 'net.ipv6.conf.lo.disable_ipv6 = 1' >> /etc/sysctl.conf
 sudo sysctl -p
 
-echo 'nameserver 8.8.8.8' >> /etc/resolvconf/resolv.conf.d/tail
+# setup resolvconf for ubuntu 20
+sudo echo 'nameserver 8.8.8.8' >> /etc/resolv.conf
+apt update
+apt install resolvconf
+systemctl restart resolvconf.service
+while [ `systemctl is-active resolvconf` != 'active' ]; do echo 'waiting for resolvconf'; sleep 5; done
+echo 'nameserver 8.8.8.8' >> /etc/resolvconf/resolv.conf.d/head
 resolvconf -u
 
-systemctl restart networking.service
-while [ `systemctl is-active networking` != 'active' ]; do echo 'waiting for network'; sleep 5; done
+#systemctl restart networking.service
+systemctl restart systemd-networkd.service
+while [ `systemctl is-active systemd-networkd` != 'active' ]; do echo 'waiting for network'; sleep 5; done
 
 growpart /dev/sda 1 || :
 resize2fs /dev/sda1 || :
 
 # redundancy: https://github.com/vmware/container-service-extension/issues/432
-systemctl restart networking.service
-while [ `systemctl is-active networking` != 'active' ]; do echo 'waiting for network'; sleep 5; done
+systemctl restart systemd-networkd.service
+while [ `systemctl is-active systemd-networkd` != 'active' ]; do echo 'waiting for network'; sleep 5; done
 
 echo 'installing kubernetes'
 
-docker_ce_version=5:20.10.7~3-0~ubuntu-xenial
-kubernetes_tools_version=1.21.2-00
+docker_ce_version=5:20.10.12~3-0~ubuntu-focal
+kubernetes_tools_version=1.23.3-00
 kubernetes_cni_version=0.8.7-00
 weave_version=2.8.1
 versioned_weave_file="/root/weave_v$(echo $weave_version | sed -r 's/\./\-/g').yml"
