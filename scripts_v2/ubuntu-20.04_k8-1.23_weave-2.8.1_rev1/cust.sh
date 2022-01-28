@@ -48,6 +48,15 @@ add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(
 apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acquire::http::Timeout=30 -o Acquire::https::No-Cache=True -o Acquire::https::Timeout=30 -o Acquire::ftp::Timeout=30
 apt-get -q install -y docker-ce=$docker_ce_version
 apt-get -q install -y kubelet=$kubernetes_tools_version kubeadm=$kubernetes_tools_version kubectl=$kubernetes_tools_version kubernetes-cni=$kubernetes_cni_version
+
+# https://github.com/kubernetes/kubeadm/issues/1893
+cat <<EOF > /etc/docker/daemon.json
+{
+    "exec-opts": ["native.cgroupdriver=systemd"]
+}
+EOF
+systemctl enable docker
+systemctl daemon-reload
 systemctl restart docker
 while [ `systemctl is-active docker` != 'active' ]; do echo 'waiting for docker'; sleep 5; done
 
