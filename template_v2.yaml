@@ -3,7 +3,7 @@ scripts_directory: scripts_v2
 templates:
   - cpu: 2
     deprecated: false
-    description: "Ubuntu 20.04, Docker-ce 20.10.12, Kubernetes 1.23.3, weave 2.8.1"
+    description: "Ubuntu 20.04, Docker-ce 20.10.12, Kubernetes 1.23.3, weave 2.8.1, containerd 1.4.12"
     mem: 2048
     name: ubuntu-20.04_k8-1.23_weave-2.8.1
     revision: 1
