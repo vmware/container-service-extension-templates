@@ -50,13 +50,6 @@ apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acqui
 apt-get -q install -y docker-ce=$docker_ce_version docker-ce-cli=$docker_ce_version containerd.io=$containerd_version
 apt-get -q install -y kubelet=$kubernetes_tools_version kubeadm=$kubernetes_tools_version kubectl=$kubernetes_tools_version kubernetes-cni=$kubernetes_cni_version
 
-# https://github.com/kubernetes/kubeadm/issues/1893
-# this is required if using dockershim as the cri-socket; we're switching to use containerd
-# cat <<EOF > /etc/docker/daemon.json
-# {
-#     "exec-opts": ["native.cgroupdriver=systemd"]
-# }
-# EOF
 systemctl enable docker
 systemctl daemon-reload
 systemctl restart docker
@@ -89,10 +82,6 @@ containerd config default | tee /etc/containerd/config.toml
 sed '/containerd.runtimes.runc.options/a \            SystemdCgroup = true' /etc/containerd/config.toml > /etc/containerd/config.toml
 systemctl restart containerd
 while [ `systemctl is-active containerd` != 'active' ]; do echo 'waiting for containerd'; sleep 5; done
-
-# Kubeadm uses default CRI, which is dockershim currently
-# Change default CRI endpoint to containerd (recommended by crictl)
-# crictl config --set runtime-endpoint=/run/containerd/containerd.sock
 
 echo 'installing required software for NFS'
 apt-get -q install -y nfs-common nfs-kernel-server
