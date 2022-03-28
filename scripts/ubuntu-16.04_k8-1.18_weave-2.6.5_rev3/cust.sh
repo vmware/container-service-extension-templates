@@ -33,7 +33,7 @@ EOF
 add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 apt-get -q update -o Acquire::Retries=3 -o Acquire::http::No-Cache=True -o Acquire::http::Timeout=30 -o Acquire::https::No-Cache=True -o Acquire::https::Timeout=30 -o Acquire::ftp::Timeout=30
 apt-get -q install -y docker-ce=5:19.03.12~3-0~ubuntu-xenial
-apt-get -q install -y kubelet=1.19.3-00 kubeadm=1.19.3-00 kubectl=1.19.3-00 kubernetes-cni=0.8.7-00
+apt-get -q install -y kubelet=1.18.6-00 kubeadm=1.18.6-00 kubectl=1.18.6-00 kubernetes-cni=0.8.6-00
 systemctl restart docker
 while [ `systemctl is-active docker` != 'active' ]; do echo 'waiting for docker'; sleep 5; done
 
@@ -62,7 +62,6 @@ export kubever=$(kubectl version --client | base64 | tr -d '\n')
 wget --no-verbose -O /root/weave_v2-6-5.yml "https://cloud.weave.works/k8s/net?k8s-version=$kubever&v=2.6.5"
 # Fix the weave image location
 sed -i 's/ghcr.io\/weaveworks\/launcher/docker.io\/weaveworks/g' /root/weave_v2-6-5.yml
-
 # /etc/machine-id must be empty so that new machine-id gets assigned on boot (in our case boot is vApp deployment)
 # https://jaylacroix.com/fixing-ubuntu-18-04-virtual-machines-that-fight-over-the-same-ip-address/
 truncate -s 0 /etc/machine-id
