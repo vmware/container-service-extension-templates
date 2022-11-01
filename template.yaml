@@ -6,7 +6,7 @@ scripts_directory: scripts
 templates:
   - compute_policy: ""
     cpu: 2
-    deprecated: false
+    deprecated: true
     description: "Ubuntu 16.04, Docker-ce 20.10.7, Kubernetes 1.21.2, weave 2.8.1"
     mem: 2048
     name: ubuntu-16.04_k8-1.21_weave-2.8.1
@@ -26,7 +26,7 @@ templates:
       - "ubuntu-16.04_k8-1.20_weave-2.6.5"
   - compute_policy: ""
     cpu: 2
-    deprecated: false
+    deprecated: true
     description: "Ubuntu 16.04, Docker-ce 19.03.15, Kubernetes 1.20.6, weave 2.6.5"
     mem: 2048
     name: ubuntu-16.04_k8-1.20_weave-2.6.5
@@ -46,7 +46,7 @@ templates:
       - "ubuntu-16.04_k8-1.19_weave-2.6.5"
   - compute_policy: ""
     cpu: 2
-    deprecated: false
+    deprecated: true
     description: "Ubuntu 16.04, Docker-ce 19.03.12, Kubernetes 1.19.3, weave 2.6.5"
     mem: 2048
     name: ubuntu-16.04_k8-1.19_weave-2.6.5
