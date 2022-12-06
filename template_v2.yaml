@@ -20,7 +20,7 @@ templates:
     upgrade_from:
       - ""
     min_cse_version: "3.1.2"
-    max_cse_version: "3.1.4"
+    max_cse_version: "3.1.5"
   - cpu: 2
     deprecated: false
     description: "Ubuntu 16.04, Docker-ce 20.10.7, Kubernetes 1.21.2, weave 2.8.1"
@@ -41,4 +41,4 @@ templates:
       - "ubuntu-16.04_k8-1.21_weave-2.8.1"
       - "ubuntu-16.04_k8-1.20_weave-2.6.5"
     min_cse_version: "3.1.0"
-    max_cse_version: "3.1.4"
+    max_cse_version: "3.1.5"
