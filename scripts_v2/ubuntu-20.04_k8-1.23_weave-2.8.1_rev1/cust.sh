@@ -31,7 +31,7 @@ while [ `systemctl is-active systemd-networkd` != 'active' ]; do echo 'waiting f
 echo 'installing kubernetes'
 
 docker_ce_version=5:20.10.12~3-0~ubuntu-focal
-containerd_version=1.4.12-1
+containerd_version=1.6.18-1
 kubernetes_tools_version=1.23.3-00
 kubernetes_cni_version=0.8.7-00
 weave_version=2.8.1
